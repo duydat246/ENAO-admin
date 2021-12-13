@@ -1,0 +1,39 @@
+.Text-tile {
+  font-size: 1.2rem;
+  font-weight: 700;
+  float: left;
+}
+
+.buttons-add-nv {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.form-inline {
+  display: flex;
+}
+
+.form-inline > input {
+  margin-right: 10px;
+  float: right;
+}
+
+.icon-search {
+  color: #000;
+}
+
+.btn-search:hover > .icon-search {
+  color: #fff;
+}
+
+.table-cell__btn_dropdown {
+  width: 90px;
+  height: 30px;
+}
+
+.table-cell__btn_toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
