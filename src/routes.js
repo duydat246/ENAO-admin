@@ -59,6 +59,10 @@ const Danhsachgroup = React.lazy(() => import('./views/admin/Danhsachgroup/Danhs
 const Danhsachtimesheet = React.lazy(() =>
   import('./views/admin/Danhsachtimesheet/Danhsachtimesheet'),
 )
+const Themmoigroup = React.lazy(() =>import('./views/admin/Danhsachgroup/Groupcreate'))
+const Themmoibonus = React.lazy(() =>import('./views/admin/Danhsachbonus/Danhsachbonuscreate'))
+const Suabonus = React.lazy(() =>import('./views/admin/Danhsachbonus/Danhsachbonuscreate'))
+const Themmoitimesheet = React.lazy(() =>import('./views/admin/Danhsachtimesheet/Themmoitimesheet'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -116,6 +120,10 @@ const routes = [
     component: Danhsachluongngay,
   },
   { path: '/admin/danh-sach-timesheet', name: 'Danh sách timesheet', component: Danhsachtimesheet },
+  { path:'/admin/them-moi-group', name:'Thêm mới group', component:Themmoigroup },
+  { path:'/admin/them-moi-bonus', name:'Thêm mới bonus', component:Themmoibonus },
+  { path:'/admin/sua-bonus', name:'Sửa bonus', component:Suabonus},
+  { path:'/admin/them-moi-timesheet', name:'Thêm mới timesheet', component:Themmoitimesheet},
 ]
 
 export default routes

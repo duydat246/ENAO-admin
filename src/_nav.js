@@ -58,6 +58,16 @@ const _nav = [
         to: '/admin/danh-sach-luong-ngay',
         icon: <CIcon icon={cilSpreadsheet} customClassName="nav-icon" />,
       },
+      // {
+      //   component: CNavItem,
+      //   name : 'Thêm mới group',
+      //   to :'/admin/them-moi-group'
+      // },
+      // { 
+      //   component: CNavItem,
+      //   name: 'Thêm mới bonus',
+      //   to:'/admin/them-moi-bonus'
+      // }
     ],
   },
 ]
