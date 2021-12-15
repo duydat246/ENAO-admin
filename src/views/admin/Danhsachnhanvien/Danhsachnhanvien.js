@@ -17,9 +17,53 @@ import {
   CTableRow,
 } from '@coreui/react'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Danhsachnhanvien.css'
 
 const Danhsachnhanvien = () => {
+  // call api
+  // const url = 'http://localhost:8080/timesheet/api/v1/timesheet/salary/get'
+  // const [data, setData] = useState([])
+  // useEffect(() => {
+  //   axios
+  //     .get(url)
+  //     .then((res) => {
+  //       setData(res.data)
+  //       console.log(res.data)
+  //       if (data.length > 0) {
+  //         console.log('có data')
+  //         alert('Tải thành công', {
+  //           duration: 2000,
+  //         })
+  //         for (var item in data) {
+  //           console.log(item)
+  //         }
+  //       } else {
+  //         console.log('không có data')
+  //         console.log(data)
+  //         return (
+  //           <CToast
+  //             autohide={false}
+  //             visible={true}
+  //             color="primary"
+  //             className="text-white align-items-center"
+  //           >
+  //             <div className="d-flex">
+  //               <CToastBody>Hello, world! This is a toast message.</CToastBody>
+  //               <CToastClose className="me-2 m-auto" white />
+  //             </div>
+  //           </CToast>
+  //         )
+  //       }
+  //     })
+  //     .catch((e) => {
+  //       alert('Đã xảy ra lỗi', {
+  //         duration: 2000,
+  //       })
+  //       console.log(e)
+  //     })
+  // }, [])
+
   return (
     <div className="container">
       <CRow>
@@ -31,8 +75,22 @@ const Danhsachnhanvien = () => {
           <CDropdown>
             <CDropdownToggle color="primary">Thêm mới</CDropdownToggle>
             <CDropdownMenu>
-              <CDropdownItem href="#">Thêm mới nhân viên</CDropdownItem>
-              <CDropdownItem href="#">Thêm mới lương</CDropdownItem>
+              <CDropdownItem>
+                <Link
+                  to="/admin/them-nhan-vien"
+                  style={{ textDecoration: 'none', color: '#4f5d73' }}
+                >
+                  Thêm mới nhân viên
+                </Link>
+              </CDropdownItem>
+              <CDropdownItem>
+                <Link
+                  to="/admin/them-luong-nhan-vien"
+                  style={{ textDecoration: 'none', color: '#4f5d73' }}
+                >
+                  Thêm mới lương
+                </Link>
+              </CDropdownItem>
             </CDropdownMenu>
           </CDropdown>
         </CCol>
@@ -64,6 +122,7 @@ const Danhsachnhanvien = () => {
             <CTableHeaderCell scope="col">Chức năng</CTableHeaderCell>
           </CTableRow>
         </CTableHead>
+
         <CTableBody>
           <CTableRow>
             <CTableHeaderCell scope="row">1</CTableHeaderCell>
@@ -79,24 +138,29 @@ const Danhsachnhanvien = () => {
                 </CDropdownToggle>
                 <CDropdownMenu>
                   <CDropdownItem>
-                    <CIcon icon={cilUser} /> thông tin
+                    <CIcon icon={cilUser} />
+                    <Link
+                      to="/admin/thong-tin-nhan-vien"
+                      style={{ textDecoration: 'none', color: '#4f5d73', paddingLeft: '5px' }}
+                    >
+                      Thông tin
+                    </Link>
                   </CDropdownItem>
                   <CDropdownDivider />
-                  <CDropdownItem>
+                  <CDropdownItem href="#" style={{ color: 'red' }}>
                     <CIcon icon={cilTrash} /> Xóa
                   </CDropdownItem>
                 </CDropdownMenu>
               </CDropdown>
             </CTableDataCell>
           </CTableRow>
-
           <CTableRow>
             <CTableHeaderCell scope="row">2</CTableHeaderCell>
-            <CTableDataCell>NV2</CTableDataCell>
-            <CTableDataCell>Pham Van Kha</CTableDataCell>
-            <CTableDataCell>01/02/1999</CTableDataCell>
-            <CTableDataCell>BIDV 21510001234567</CTableDataCell>
-            <CTableDataCell>5000000</CTableDataCell>
+            <CTableDataCell>NV1</CTableDataCell>
+            <CTableDataCell>Pham Duy Dat</CTableDataCell>
+            <CTableDataCell>24/06/1999</CTableDataCell>
+            <CTableDataCell>BIDV 21510002263734</CTableDataCell>
+            <CTableDataCell>10000000</CTableDataCell>
             <CTableDataCell className="table-cell__item">
               <CDropdown className="table-cell__btn_dropdown">
                 <CDropdownToggle color={'secondary'} className="table-cell__btn_toggle">
@@ -104,24 +168,29 @@ const Danhsachnhanvien = () => {
                 </CDropdownToggle>
                 <CDropdownMenu>
                   <CDropdownItem>
-                    <CIcon icon={cilUser} /> thông tin
+                    <CIcon icon={cilUser} />
+                    <Link
+                      to="/admin/thong-tin-nhan-vien"
+                      style={{ textDecoration: 'none', color: '#4f5d73', paddingLeft: '5px' }}
+                    >
+                      Thông tin
+                    </Link>
                   </CDropdownItem>
                   <CDropdownDivider />
-                  <CDropdownItem>
+                  <CDropdownItem href="#" style={{ color: 'red' }}>
                     <CIcon icon={cilTrash} /> Xóa
                   </CDropdownItem>
                 </CDropdownMenu>
               </CDropdown>
             </CTableDataCell>
           </CTableRow>
-
           <CTableRow>
             <CTableHeaderCell scope="row">3</CTableHeaderCell>
-            <CTableDataCell>NV3</CTableDataCell>
-            <CTableDataCell>Nguyen Ngoc Tran Hoan</CTableDataCell>
-            <CTableDataCell>12/06/1999</CTableDataCell>
-            <CTableDataCell>BIDV 21510002265784</CTableDataCell>
-            <CTableDataCell>6000000</CTableDataCell>
+            <CTableDataCell>NV1</CTableDataCell>
+            <CTableDataCell>Pham Duy Dat</CTableDataCell>
+            <CTableDataCell>24/06/1999</CTableDataCell>
+            <CTableDataCell>BIDV 21510002263734</CTableDataCell>
+            <CTableDataCell>10000000</CTableDataCell>
             <CTableDataCell className="table-cell__item">
               <CDropdown className="table-cell__btn_dropdown">
                 <CDropdownToggle color={'secondary'} className="table-cell__btn_toggle">
@@ -129,10 +198,16 @@ const Danhsachnhanvien = () => {
                 </CDropdownToggle>
                 <CDropdownMenu>
                   <CDropdownItem>
-                    <CIcon icon={cilUser} /> thông tin
+                    <CIcon icon={cilUser} />
+                    <Link
+                      to="/admin/thong-tin-nhan-vien"
+                      style={{ textDecoration: 'none', color: '#4f5d73', paddingLeft: '5px' }}
+                    >
+                      Thông tin
+                    </Link>
                   </CDropdownItem>
                   <CDropdownDivider />
-                  <CDropdownItem>
+                  <CDropdownItem href="#" style={{ color: 'red' }}>
                     <CIcon icon={cilTrash} /> Xóa
                   </CDropdownItem>
                 </CDropdownMenu>

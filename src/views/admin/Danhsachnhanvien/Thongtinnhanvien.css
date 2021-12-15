@@ -1,0 +1,17 @@
+.form-inline {
+  display: inline-flex;
+}
+.custom-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-luong__title {
+  margin-top: 5px;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+.table-luong__title > b {
+  font-size: 1.2rem;
+}

@@ -50,11 +50,23 @@ const Toasts = React.lazy(() => import('./views/notifications/toasts/Toasts'))
 
 const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
+// nhan vien
 const Danhsachnhanvien = React.lazy(() => import('./views/admin/Danhsachnhanvien/Danhsachnhanvien'))
+const Themnhanvien = React.lazy(() => import('./views/admin/Danhsachnhanvien/Themnhanvien'))
+const Themluongnhanvien = React.lazy(() =>
+  import('./views/admin/Danhsachnhanvien/Themluongnhanvien'),
+)
+const Thongtinnhanvien = React.lazy(() => import('./views/admin/Danhsachnhanvien/Thongtinnhanvien'))
+
+// bonus
 const Danhsachbonus = React.lazy(() => import('./views/admin/Danhsachbonus/Danhsachbonus'))
+
+// luong ngay
 const Danhsachluongngay = React.lazy(() =>
   import('./views/admin/Danhsachluongngay/Danhsachluongngay'),
 )
+
+// group
 const Danhsachgroup = React.lazy(() => import('./views/admin/Danhsachgroup/Danhsachgroup'))
 const Danhsachtimesheet = React.lazy(() =>
   import('./views/admin/Danhsachtimesheet/Danhsachtimesheet'),
@@ -108,6 +120,19 @@ const routes = [
 
   { path: '/admin', name: 'Admin', component: Danhsachnhanvien, exact: true },
   { path: '/admin/danh-sach-nhan-vien', name: 'Danh sách nhân viên', component: Danhsachnhanvien },
+  { path: '/admin/them-nhan-vien', name: 'Thêm nhân viên', component: Themnhanvien },
+  {
+    path: '/admin/them-luong-nhan-vien',
+    name: 'Thêm mới lương nhân viên',
+    component: Themluongnhanvien,
+  },
+
+  {
+    path: '/admin/thong-tin-nhan-vien',
+    name: 'thông tin nhân viên',
+    component: Thongtinnhanvien,
+  },
+
   { path: '/admin/danh-sach-bonus', name: 'Danh sách bonus', component: Danhsachbonus },
   { path: '/admin/danh-sach-group', name: 'Danh sách group', component: Danhsachgroup },
   {
