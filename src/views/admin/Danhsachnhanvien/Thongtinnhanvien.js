@@ -27,7 +27,7 @@ const Thongtinnhanvien = () => {
   return (
     <div>
       <CRow>
-        <CCol md="12" lg="7">
+        <CCol md="12" lg="7" style={{ marginBottom: '30px' }}>
           <CCard>
             <CCardHeader>
               <CIcon name="cil-justify-center" />
@@ -43,8 +43,8 @@ const Thongtinnhanvien = () => {
             </CCardBody>
           </CCard>
         </CCol>
-        <CCol md="12" lg="5">
-          <CCard>
+        <CCol md="12" lg="5" style={{ marginBottom: '30px' }}>
+          <CCard style={{ height: '100%' }}>
             <CCardHeader>
               <CIcon name="cil-justify-center" />
               <strong> Thông tin nhân viên </strong>
@@ -144,7 +144,7 @@ const Thongtinnhanvien = () => {
           </CForm>
         </CNav>
 
-        <CTable>
+        <CTable style={{ marginTop: '15px' }} className="table table-border">
           <CTableHead color="dark">
             <CTableRow>
               <CTableHeaderCell scope="col">Id</CTableHeaderCell>
