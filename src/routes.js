@@ -72,6 +72,10 @@ const Danhsachtimesheet = React.lazy(() =>
   import('./views/admin/Danhsachtimesheet/Danhsachtimesheet'),
 )
 
+const Themtimesheet = React.lazy(() =>
+  import('./views/admin/Danhsachtimesheet/Danhsachtimesheetcreate'),
+)
+
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
@@ -141,6 +145,11 @@ const routes = [
     component: Danhsachluongngay,
   },
   { path: '/admin/danh-sach-timesheet', name: 'Danh sách timesheet', component: Danhsachtimesheet },
+  {
+    path: '/admin/them-time-sheet',
+    name: 'Thêm mới timesheet',
+    component: Themtimesheet,
+  },
 ]
 
 export default routes

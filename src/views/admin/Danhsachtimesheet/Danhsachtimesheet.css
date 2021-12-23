@@ -1,0 +1,12 @@
+.btn-outline-success {
+  background: #ebedef;
+  color: #4dc374;
+}
+.btn-outline-success:hover {
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}

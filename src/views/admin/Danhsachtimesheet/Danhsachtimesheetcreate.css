@@ -1,0 +1,6 @@
+.input-custom-border-none:focus {
+  outline: none;
+}
+.input-custom-border-none {
+  margin-left: 5px;
+}
