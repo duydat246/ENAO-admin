@@ -22,17 +22,21 @@ import { Link } from 'react-router-dom'
 import { getUsers, usersSelector, deleteUser } from '../../../store/reducers/usersReducer'
 import './Danhsachnhanvien.css'
 
+// list users
 const Danhsachnhanvien = () => {
+  // take users from selector
   const users = useSelector(usersSelector)
   const dispatch = useDispatch()
 
-  const deleteSingleUser = (userId) => {
-    dispatch(deleteUser(userId))
-  }
-
+  // render list when load list users
   useEffect(() => {
     dispatch(getUsers())
   }, [dispatch])
+
+  // delete user
+  const deleteSingleUser = (userId) => {
+    dispatch(deleteUser(userId))
+  }
 
   return (
     <div className="container">
@@ -80,6 +84,7 @@ const Danhsachnhanvien = () => {
           </CButton>
         </form>
       </nav>
+      {/* table list users */}
       <div className="table-outer">
         <CTable id="myTable">
           <CTableHead color="dark">
